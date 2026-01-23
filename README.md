@@ -73,33 +73,6 @@ Handwritten-Mathematical-Equation-Recognition-Using-CNN/
 ├── README.md               # Project documentation
 └── .gitignore
 ```
-
----
-
-## 🖼 Screenshots
-
-### 🏠 Home Page
-
-```markdown
-![Home Page](screenshots/home.png)
-```
-
-### ✍ Canvas Input
-
-```markdown
-![Canvas Input](screenshots/canvas.png)
-```
-
-### ✅ Recognized Output
-
-```markdown
-![Output](screenshots/output.png)
-```
-
-> Upload your screenshots inside a `screenshots/` folder in your repo.
-
----
-
 ## ⚙ How the System Works
 
 1. User uploads or draws a handwritten mathematical equation
