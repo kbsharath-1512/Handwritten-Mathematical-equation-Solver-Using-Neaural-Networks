@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handwritten Equation Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🧮 Handwritten Equation Solver</h1>
+
+    <!-- IMAGE UPLOAD -->
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="upload-box">
+            <label class="upload-label">
+                📁 Choose Image
+                <input type="file" name="image" required>
+            </label>
+        </div>
+
+        <button type="submit" class="btn predict">📤 Upload Image</button>
+    </form>
+
+    <!-- PREDICT -->
+    <button class="btn predict" onclick="predictEquation()">🤖 Predict</button>
+
+    <input type="text" id="equationBox" placeholder="Predicted equation" readonly>
+
+    <!-- SOLVE -->
+    <button class="btn solve" onclick="solveEquation()">🧠 Solve</button>
+
+    <div class="result-card glow">
+        <h2 id="result"></h2>
+    </div>
+
+    <a href="/canvas_image" style="color:#00ffd5">✍ Draw on Canvas</a>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

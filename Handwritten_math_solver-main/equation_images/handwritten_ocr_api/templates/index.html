@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handwritten Equation Solver</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 40px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            width: 420px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .result {
+            background: #eef;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .error {
+            background: #fee;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            color: red;
+        }
+        .status {
+            background: #e7ffe7;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Handwritten Equation Solver</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Predict & Solve</button>
+    </form>
+
+    <!-- File received confirmation -->
+    {% if file_status %}
+    <div class="status">
+        {{ file_status }}
+    </div>
+    {% endif %}
+
+    <!-- Error message -->
+    {% if error %}
+    <div class="error">
+        <b>Error:</b><br>
+        {{ error }}
+    </div>
+    {% endif %}
+
+    <!-- Results -->
+    {% if ocr_text %}
+    <div class="result">
+        <b>OCR Text:</b><br>
+        {{ ocr_text }}
+    </div>
+
+    <div class="result">
+        <b>Cleaned Equation:</b><br>
+        {{ cleaned_expr }}
+    </div>
+
+    <div class="result">
+        <b>Final Result:</b><br>
+        {{ result }}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

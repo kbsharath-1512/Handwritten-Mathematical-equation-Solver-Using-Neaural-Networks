@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handwritten Equation Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- 🔔 TOAST -->
+<div id="toast"></div>
+
+<div class="container">
+
+    <h1>🧮 Handwritten Equation Solver</h1>
+
+    <!-- FILE INPUT -->
+    <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+
+    <!-- PREVIEW -->
+    <div id="previewBox" style="display:none;">
+        <p><b>Image Preview</b></p>
+        <img id="previewImg">
+    </div>
+
+    <button class="btn predict" onclick="uploadImage()">📤 Upload Image</button>
+    <button class="btn predict" onclick="predictEquation()">🤖 Predict & Solve</button>
+
+    <!-- RESULTS -->
+    <div id="equationList"></div>
+
+    <button class="btn solve" onclick="clearResults()">🧹 Clear Results</button>
+
+    <div class="links">
+        <a href="/canvas_image">✍ Draw Equation</a>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
