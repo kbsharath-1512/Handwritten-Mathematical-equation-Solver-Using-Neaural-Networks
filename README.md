@@ -1,10 +1,3 @@
-Great — here’s a **ready-to-use GitHub README.md** similar to the one in your screenshots, customized for your
-**Handwritten Mathematical Equation Solver Using CNN** project.
-
-You can **copy-paste this directly** into your GitHub README.
-
----
-
 # 🧮 Handwritten Mathematical Equation Recognition and Solving Using CNN
 
 ## 📌 Project Overview
