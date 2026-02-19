@@ -119,6 +119,21 @@ python app.py
 ```
 http://127.0.0.1:5000/
 ```
+---
+
+### Results
+
+### HOME PAGE
+
+![Home ](https://github.com/user-attachments/assets/59690181-870c-4084-ba69-67629115d1bc)
+
+### SINGLE EQUATION SOLVING 
+
+![single equation](https://github.com/user-attachments/assets/fda2d506-c256-4adc-a2e6-42a98c2c4e85)
+
+### MULTILINE EQUATION SOLVING
+
+![multiline equation](https://github.com/user-attachments/assets/a1c2ebec-0fe5-413e-9b93-e3798f4da71b)
 
 ---
 
